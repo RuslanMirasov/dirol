@@ -1,20 +1,6 @@
+import { throttle, isInViewport } from './utils.js';
+
 const lazyImages = document.querySelectorAll('img[data-src]');
-
-function throttle(func, delay) {
-  let lastCall = 0;
-  return function (...args) {
-    const now = new Date().getTime();
-    if (now - lastCall >= delay) {
-      lastCall = now;
-      return func(...args);
-    }
-  };
-}
-
-function isInViewport(el, gap) {
-  const rect = el.getBoundingClientRect();
-  return rect.top <= window.innerHeight + gap && rect.bottom >= -gap;
-}
 
 function lazyLoadImages() {
   lazyImages.forEach(img => {
