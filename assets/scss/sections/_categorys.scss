@@ -165,6 +165,7 @@
   }
   .thumbnail {
     position: relative;
+    min-height: 66px;
     img {
       border-radius: 10px;
       box-shadow: -6px 6px 0px var(--black), 6px -6px 0px var(--white);
