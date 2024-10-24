@@ -1,0 +1,89 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: auto;
+  overflow-x: hidden;
+}
+
+body,
+.body {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-family: var(--font);
+  color: var(--white);
+  line-height: 1.2;
+  background: url('../img/bg.jpg') repeat-y center top;
+  background-size: 100% auto;
+  &.freez {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+}
+
+main,
+.main {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  background: url('../img/svg/lines.svg') repeat center top;
+  backdrop-filter: blur(10px);
+  background-size: 116px auto;
+  @media screen and (max-width: 767px) {
+    background-size: 90px auto;
+  }
+}
+
+header,
+footer {
+  width: 100%;
+}
+
+img,
+picture {
+  display: block;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+button {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+ul,
+menu,
+ol {
+  list-style: none;
+}

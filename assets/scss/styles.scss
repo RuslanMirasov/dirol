@@ -1,0 +1,51 @@
+:root {
+  --red: #e51d38;
+  --green: #00ab49;
+  --yellow: #ffe70f;
+  --blue: #188ca4;
+
+  --invalid: #d30e14;
+  --black: #000000;
+  --white: #ffffff;
+
+  --footer-bg: #2c2c2c;
+  --backdrop: rgba(0, 0, 0, 0.3);
+  --bg: #ffffff;
+  --font: 'avg', sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+//preloader
+@import './components/preloader';
+
+//Basics
+@import './basics/fonts';
+@import './basics/reset';
+@import './basics/typography';
+@import './basics/animations';
+
+//Sections
+@import './sections/hero';
+@import './sections/quiz';
+@import './sections/history';
+@import './sections/categorys';
+@import './sections/posts';
+@import './sections/post';
+@import './sections/slider';
+@import './sections/markets';
+
+//Components
+@import './components/burger';
+@import './components/buttons';
+@import './components/footer';
+@import './components/form';
+@import './components/header';
+@import './components/menu';
+@import './components/modal';
+@import './components/section';

@@ -1,0 +1,29 @@
+.section.section--quiz {
+  padding: 80px 0px 90px 0px;
+  .collage {
+    .collage__lc {
+      img {
+        max-width: 640px;
+        transform: translate(10%, 30%);
+      }
+    }
+    .collage__lb {
+      img {
+        max-width: 380px;
+        transform: translate(18%, -11%);
+      }
+    }
+    .collage__rt {
+      img {
+        max-width: 450px;
+        transform: translate(10%, 40%);
+      }
+    }
+    .collage__rb {
+      img {
+        max-width: 650px;
+        transform: translate(-12%, 5%);
+      }
+    }
+  }
+}

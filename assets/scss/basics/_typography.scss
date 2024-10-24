@@ -1,0 +1,119 @@
+.titleBox {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 40px;
+  p {
+    width: 100%;
+    text-align: center;
+    transform: rotate(-6.5deg);
+    text-transform: uppercase;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  font-style: italic;
+  position: relative;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.title {
+  text-align: center;
+  text-shadow: 4px 4px 0px var(--black);
+  transform: rotate(-6.5deg);
+
+  span {
+    display: inline;
+    vertical-align: top;
+    position: relative;
+    &.green {
+      padding: 0px 20px;
+      &:before {
+        content: '';
+        width: 100%;
+        height: auto;
+        background: url('../img/title.jpg') no-repeat center center/cover;
+        position: absolute;
+        left: 0px;
+        top: 0%;
+        bottom: 0%;
+        z-index: -1;
+        box-shadow: 5px 5px 0px var(--white);
+        transform: skewX(-20deg);
+      }
+      &.t--130,
+      &.t--100 {
+        &:before {
+          content: '';
+          height: auto;
+          top: 14%;
+          bottom: 14%;
+        }
+      }
+    }
+  }
+
+  &.ta--l {
+    text-align: left;
+  }
+  &.ta--r {
+    text-align: right;
+  }
+}
+
+.t--42 {
+  font-size: 42px;
+}
+
+.t--45 {
+  font-size: 45px;
+}
+
+.t--65 {
+  font-size: 65px;
+}
+
+.t--70 {
+  font-size: 70px;
+  line-height: 1;
+}
+
+.t--80 {
+  font-size: 80px;
+}
+
+.t--90 {
+  font-size: 90px;
+}
+
+.t--100 {
+  font-size: 100px;
+}
+
+.t--110 {
+  font-size: 110px;
+}
+
+.t--120 {
+  font-size: 120px;
+}
+
+.t--130 {
+  font-size: 130px;
+}
+
+.subtitle {
+  font-size: 16px;
+  line-height: 1.3;
+}
