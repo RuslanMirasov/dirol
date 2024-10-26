@@ -1,24 +1,12 @@
 import { menuToggle } from './menu.js';
+import { throttle } from './utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const refs = {
     preloader: document.querySelector('.preloader'),
     scrollLinks: document.querySelectorAll('[data-scrollto]'),
-    runTexts: document.querySelectorAll('[data-runtext]'),
-    accordeon: document.querySelectorAll('[data-accordeon]'),
     header: document.querySelector('.header'),
-    lookSwiper: document.querySelector('.swiper--look'),
   };
-
-  // FIX HEADER
-  document.addEventListener('scroll', () => {
-    const scrollTop = document.documentElement.scrollTop;
-    if (scrollTop > 0) {
-      refs.header.classList.add('fix');
-      return;
-    }
-    refs.header.classList.remove('fix');
-  });
 
   // SCROLL TO BLOCK
   refs.scrollLinks.forEach(link => {
@@ -45,26 +33,67 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   //SLIDERS
-  if (refs.lookSwiper) {
-    const swiper = new Swiper(refs.lookSwiper, {
-      allowTouchMove: true,
-      slidesPerView: 'auto',
-      breakpoints: {
-        768: {
-          spaceBetween: 40,
-          centeredSlides: false,
-        },
-        0: {
-          spaceBetween: 18,
-          centeredSlides: true,
-        },
-      },
+
+  let sliders = [];
+
+  function initSliders() {
+    const sliderElements = document.querySelectorAll('[data-js="product-slider"]');
+
+    sliderElements.forEach((slider, index) => {
+      if (window.innerWidth <= 767) {
+        if (!sliders[index]) {
+          sliders[index] = new Swiper(slider, {
+            allowTouchMove: true,
+            slidesPerView: 'auto',
+            spaceBetween: 150,
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+          });
+        }
+      } else {
+        if (sliders[index]) {
+          sliders[index].destroy(true, true);
+          sliders[index] = null;
+        }
+      }
     });
   }
 
-  window.addEventListener('load', () => {
+  //HIDE PRELOADER
+  const hidePreloader = () => {
     if (refs.preloader) {
       refs.preloader.classList.add('hidden');
+      setTimeout(() => {
+        refs.preloader.remove();
+      }, 600);
+    }
+  };
+
+  // FIX HEADER
+  const fixHeader = () => {
+    if (window.scrollY > 0 && !refs.header.classList.contains('fix')) {
+      refs.header.classList.add('fix');
+    }
+  };
+
+  document.addEventListener('scroll', throttle(fixHeader, 600));
+  document.addEventListener('scroll', () => {
+    if (window.scrollY === 0) {
+      refs.header.classList.remove('fix');
     }
   });
+
+  window.addEventListener('load', () => {
+    hidePreloader();
+    fixHeader();
+    initSliders();
+  });
+
+  window.addEventListener('resize', initSliders);
 });

@@ -92,3 +92,60 @@ menu,
 ol {
   list-style: none;
 }
+
+//SWIPER
+.swiper-button-next,
+.swiper-button-prev {
+  &:after {
+    content: none;
+  }
+  width: 100px;
+  height: 100px;
+  background-position: 0% 0%;
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  &:hover {
+    background-position: 100% 0%;
+  }
+}
+
+.swiper-button-next {
+  right: 0px;
+  background-image: url('../img/svg/arr_right_white.svg');
+}
+
+.swiper-button-prev {
+  left: 0px;
+  background-image: url('../img/svg/arr_left_white.svg');
+}
+
+.swiper-pagination-bullet {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  border-radius: 0px;
+  margin: 2px 30px !important;
+  background: none;
+  background-image: url('../img/svg/pagination_white.svg');
+
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: 200% 100%;
+  &.swiper-pagination-bullet-active {
+    background-position: 100% top;
+  }
+}
+
+.white {
+  .swiper-button-next {
+    background-image: url('../img/svg/arr_right.svg');
+  }
+
+  .swiper-button-prev {
+    background-image: url('../img/svg/arr_left.svg');
+  }
+
+  .swiper-pagination-bullet {
+    background-image: url('../img/svg/pagination.svg');
+  }
+}

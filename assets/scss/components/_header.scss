@@ -63,3 +63,18 @@
     width: 70px;
   }
 }
+
+@media screen and (max-width: 767px) {
+  .header {
+    padding: 20px 0px;
+    &.fix {
+      padding: 10px 0px;
+      background: rgba(0, 0, 0, 0);
+      box-shadow: none;
+      // backdrop-filter: blur(5px);
+      .logo {
+        width: 60px;
+      }
+    }
+  }
+}

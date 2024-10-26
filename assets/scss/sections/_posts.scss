@@ -9,13 +9,6 @@
     .white-bg {
       &:after {
         content: none;
-        width: 100%;
-        left: 0px;
-        height: 50px;
-
-        transform: skewY(6.5deg);
-        top: auto;
-        bottom: 0px;
       }
     }
   }

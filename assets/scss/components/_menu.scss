@@ -104,14 +104,21 @@
       width: 100%;
       z-index: 1;
       .menu__link {
-        display: block;
+        display: inline-block;
         position: relative;
-        width: 100%;
+        width: auto;
         text-align: center;
         font-size: 24px;
-        padding: 18px 0px;
+        padding: 0px 0px;
+        margin: 18px 0px;
         user-select: none;
-        text-shadow: 3px 3px 0px var(--black);
+        color: var(--white);
+        transform: rotate(-6.5deg);
+        text-shadow: 3px 3px 0px var(--black) !important;
+        &:before {
+          background: var(--white) !important;
+          box-shadow: 3px 3px 0px var(--black) !important;
+        }
       }
     }
   }

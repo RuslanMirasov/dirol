@@ -1,31 +1,94 @@
 .section.section--categorys {
   margin-top: 80px;
+  @media screen and (max-width: 1023px) {
+    margin-top: 40px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-top: 20px;
+  }
   .titleBox {
     padding: 50px 0px 100px 0px;
+    @media screen and (max-width: 1023px) {
+      padding: 0px 0px 300px 0px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 0px 0px 200px 0px;
+    }
     z-index: 2;
     .green {
       &:before {
         box-shadow: 10px 10px 0px var(--footer-bg);
+        @media screen and (max-width: 767px) {
+          box-shadow: 5px 5px 0px var(--footer-bg);
+        }
       }
     }
   }
   .collage {
     .collage__lb {
+      @media screen and (max-width: 767px) {
+        left: 50%;
+        margin-left: -25px;
+      }
       img {
         max-width: 328px;
         transform: translate(20%, 0%);
+        @media screen and (max-width: 1279px) {
+          max-width: 280px;
+          transform: translate(30%, 0%);
+        }
+        @media screen and (max-width: 1023px) {
+          max-width: 220px;
+          transform: translate(30%, 0%);
+        }
+        @media screen and (max-width: 767px) {
+          max-width: 140px;
+          transform: translate(-80%, 14%);
+        }
       }
     }
     .collage__lt {
+      @media screen and (max-width: 767px) {
+        left: 50%;
+        margin-left: -25px;
+      }
       img {
         max-width: 340px;
         transform: translate(30%, 0%);
+        @media screen and (max-width: 1279px) {
+          max-width: 250px;
+          transform: translate(35%, -10%);
+        }
+        @media screen and (max-width: 1023px) {
+          max-width: 250px;
+          transform: translate(38%, 120%);
+        }
+        @media screen and (max-width: 767px) {
+          max-width: 160px;
+          transform: translate(-60%, 134%);
+        }
       }
     }
     .collage__rb {
+      @media screen and (max-width: 767px) {
+        right: 50%;
+        margin-right: -25px;
+      }
       img {
         max-width: 570px;
         transform: translate(-16%, -38%);
+        @media screen and (max-width: 1279px) {
+          max-width: 440px;
+          transform: translate(-20%, -44%);
+        }
+        @media screen and (max-width: 1023px) {
+          max-width: 440px;
+          transform: translate(-45%, -30%);
+        }
+        @media screen and (max-width: 767px) {
+          max-width: 250px;
+          transform: translate(36%, -20%);
+        }
       }
     }
   }
@@ -33,6 +96,9 @@
 
 .section.section--category {
   padding: 80px 0px 50px 0px;
+  @media screen and (max-width: 767px) {
+    padding: 50px 0px;
+  }
   .titleBox {
     z-index: 2;
     .title {
@@ -60,9 +126,22 @@
       z-index: -1;
       transform: skewX(-13deg);
     }
+    @media screen and (max-width: 1279px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 18px;
+      margin-top: -26px;
+    }
+    @media screen and (max-width: 374px) {
+      font-size: 14px;
+    }
   }
   &.white {
-    padding: 50px 0px 50px 0px;
+    padding: 50px 0px;
+    @media screen and (max-width: 767px) {
+      padding: 40px 0px;
+    }
     .title {
       text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
     }
@@ -86,9 +165,30 @@
   width: 100%;
   overflow: visible;
   margin: 50px 0px;
-  transform: skewY(-6.5deg);
   z-index: 2;
+  .swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+    .swiper-pagination-bullet {
+      width: 18px;
+      height: 18px;
+      margin: 2px 6px !important;
+      @media screen and (max-width: 374px) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    margin-top: 0px;
+    top: auto;
+    bottom: 70px;
+  }
   @media screen and (min-width: 768px) {
+    transform: skewY(-6.5deg);
     display: flex;
     max-width: 100%;
     height: auto;
@@ -117,6 +217,9 @@
     &.col--3 {
       .swiper-slide {
         width: 33.333333%;
+        @media screen and (max-width: 1023px) {
+          width: 50%;
+        }
         .thumbnail {
           max-width: 340px;
         }
@@ -155,17 +258,34 @@
   align-items: center;
   align-content: center;
   gap: 20px;
-  transform: skewY(6.5deg) rotate(-6.5deg);
+  @media screen and (min-width: 768px) {
+    transform: skewY(6.5deg) rotate(-6.5deg);
+  }
   h3 {
     width: 100%;
     text-align: center;
     font-size: 28px;
     line-height: 1.2;
     text-shadow: 3px 3px 0px var(--black);
+    @media screen and (max-width: 1279px) {
+      font-size: 20px;
+    }
+    @media screen and (max-width: 767px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      transform: skewY(-6.5deg);
+      padding: 0px 60px;
+      min-height: 74px;
+    }
   }
   .thumbnail {
     position: relative;
     min-height: 66px;
+    @media screen and (max-width: 767px) {
+      transform: rotate(-6.5deg);
+    }
     img {
       border-radius: 10px;
       box-shadow: -6px 6px 0px var(--black), 6px -6px 0px var(--white);
@@ -187,11 +307,17 @@
         text-transform: uppercase;
         font-size: 12px;
         transform: skewX(15deg);
+        @media screen and (max-width: 1279px) {
+          font-size: 10px;
+        }
       }
     }
   }
   .description {
     display: flex;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
     position: relative;
     width: 100%;
     min-height: 110%;
@@ -251,56 +377,147 @@
     .collage__lt img {
       min-width: 174px;
       transform: translate(-40%, 120%);
+      @media screen and (max-width: 1279px) {
+        min-width: 174px;
+        transform: translate(10%, 50%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 130px;
+        transform: translate(10%, 80%);
+      }
     }
     .collage__rc img {
       min-width: 182px;
       transform: translate(50%, 10%);
+      @media screen and (max-width: 1279px) {
+        min-width: 150px;
+        transform: translate(30%, 14%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 110px;
+        transform: translate(-70%, 550%);
+      }
     }
     .collage__cb img {
       min-width: 308px;
       transform: translate(0%, -5%);
+      @media screen and (max-width: 1279px) {
+        min-width: 250px;
+        transform: translate(0%, 5%);
+      }
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
     }
     .collage__rb img {
       min-width: 390px;
       transform: translate(-30%, -5%);
+      @media screen and (max-width: 1279px) {
+        min-width: 300px;
+        transform: translate(-60%, -20%);
+      }
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
     }
   }
   &:nth-child(3) {
     .collage__lt img {
       min-width: 184px;
       transform: translate(-30%, 80%);
+      @media screen and (max-width: 1279px) {
+        min-width: 150px;
+        transform: translate(20%, 70%);
+      }
+      @media screen and (max-width: 1023px) {
+        transform: translate(20%, 50%);
+      }
     }
     .collage__rc img {
       min-width: 220px;
       transform: translate(-45%, 65%);
+      @media screen and (max-width: 1279px) {
+        min-width: 180px;
+        transform: translate(-60%, 70%);
+      }
+      @media screen and (max-width: 1023px) {
+        transform: translate(-60%, 140%);
+      }
     }
   }
   &:nth-child(4) {
     .collage__lt img {
       min-width: 196px;
       transform: translate(0%, 36%);
+      @media screen and (max-width: 1279px) {
+        min-width: 150px;
+        transform: translate(40%, 10%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 120px;
+        transform: translate(40%, -50%);
+      }
     }
     .collage__rt img {
       min-width: 430px;
       transform: translate(-25%, -36%);
+      @media screen and (max-width: 1279px) {
+        min-width: 350px;
+        transform: translate(-50%, -38%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 300px;
+        transform: translate(-40%, -45%);
+      }
     }
   }
   &:nth-child(6) {
     .collage__lt img {
       min-width: 530px;
       transform: translate(14%, 15%);
+      @media screen and (max-width: 1279px) {
+        min-width: 450px;
+        transform: translate(30%, 15%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 300px;
+      }
     }
     .collage__rt img {
       min-width: 550px;
       transform: translate(-14%, -30%);
+      @media screen and (max-width: 1279px) {
+        min-width: 450px;
+        transform: translate(-24%, -20%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 300px;
+        transform: translate(-24%, -50%);
+      }
     }
     .collage__rc img {
       min-width: 530px;
       transform: translate(-8%, -18%);
+      @media screen and (max-width: 1279px) {
+        min-width: 450px;
+        transform: translate(-18%, 20%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 300px;
+        transform: translate(-18%, 5%);
+      }
     }
     .collage__lb img {
       min-width: 550px;
       transform: translate(5%, -10%);
+      @media screen and (max-width: 1279px) {
+        min-width: 450px;
+        transform: translate(15%, -10%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 300px;
+        transform: translate(15%, 10%);
+      }
     }
   }
   &:nth-child(7) {
@@ -308,14 +525,34 @@
     .collage__lt img {
       min-width: 406px;
       transform: translate(-5%, 36%);
+      @media screen and (max-width: 1279px) {
+        min-width: 300px;
+        transform: translate(30%, 20%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 220px;
+        transform: translate(25%, 20%);
+      }
     }
     .collage__rt img {
       min-width: 320px;
       transform: translate(-14%, -5%);
+      @media screen and (max-width: 1279px) {
+        min-width: 220px;
+        transform: translate(-44%, -5%);
+      }
+      @media screen and (max-width: 1023px) {
+        min-width: 180px;
+        transform: translate(-44%, -25%);
+      }
     }
     .collage__lb img {
       min-width: 320px;
       transform: translate(5%, 20%);
+      @media screen and (max-width: 1279px) {
+        min-width: 150px;
+        transform: translate(5%, 20%);
+      }
     }
   }
 }

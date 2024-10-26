@@ -32,7 +32,9 @@ h6 {
   text-align: center;
   text-shadow: 4px 4px 0px var(--black);
   transform: rotate(-6.5deg);
-
+  @media screen and (max-width: 767px) {
+    text-shadow: 3px 3px 0px var(--black);
+  }
   span {
     display: inline;
     vertical-align: top;
@@ -51,6 +53,9 @@ h6 {
         z-index: -1;
         box-shadow: 5px 5px 0px var(--white);
         transform: skewX(-20deg);
+        @media screen and (max-width: 767px) {
+          box-shadow: 4px 4px 0px var(--white);
+        }
       }
       &.t--130,
       &.t--100 {
@@ -95,10 +100,28 @@ h6 {
 
 .t--90 {
   font-size: 90px;
+  @media screen and (max-width: 1279px) {
+    font-size: 70px;
+  }
+  @media screen and (max-width: 1023px) {
+    font-size: 54px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 45px;
+  }
 }
 
 .t--100 {
   font-size: 100px;
+  @media screen and (max-width: 1279px) {
+    font-size: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 48px;
+  }
+  @media screen and (max-width: 374px) {
+    font-size: 42px;
+  }
 }
 
 .t--110 {
