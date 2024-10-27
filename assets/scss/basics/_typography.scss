@@ -36,7 +36,7 @@ h6 {
     text-shadow: 3px 3px 0px var(--black);
   }
   span {
-    display: inline;
+    display: inline-block;
     vertical-align: top;
     position: relative;
     &.green {
@@ -46,32 +46,16 @@ h6 {
         content: '';
         display: block;
         width: 100%;
+        height: 100%;
         background: url('../img/title.jpg') no-repeat center center/cover;
         position: absolute;
         left: 0px;
+        top: 0px;
         z-index: -1;
         box-shadow: 5px 5px 0px var(--white);
         transform: skewX(-20deg);
         @media screen and (max-width: 767px) {
           box-shadow: 4px 4px 0px var(--white);
-        }
-      }
-      &.t--130,
-      &.t--100 {
-        &:before {
-          height: 110px;
-          top: 16px;
-          @media screen and (max-width: 1279px) {
-            height: 80px;
-          }
-          @media screen and (max-width: 767px) {
-            top: 10px;
-            height: 50px;
-          }
-          @media screen and (max-width: 374px) {
-            top: 8px;
-            height: 45px;
-          }
         }
       }
     }
