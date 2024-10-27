@@ -41,15 +41,14 @@ h6 {
     position: relative;
     &.green {
       padding: 0px 20px;
+      line-height: 1;
       &:before {
         content: '';
+        display: block;
         width: 100%;
-        height: auto;
         background: url('../img/title.jpg') no-repeat center center/cover;
         position: absolute;
         left: 0px;
-        top: 0px;
-        bottom: 0px;
         z-index: -1;
         box-shadow: 5px 5px 0px var(--white);
         transform: skewX(-20deg);
@@ -60,10 +59,19 @@ h6 {
       &.t--130,
       &.t--100 {
         &:before {
-          content: '';
-          height: auto;
-          top: 8px;
-          bottom: 8px;
+          height: 110px;
+          top: 16px;
+          @media screen and (max-width: 1279px) {
+            height: 80px;
+          }
+          @media screen and (max-width: 767px) {
+            top: 10px;
+            height: 50px;
+          }
+          @media screen and (max-width: 374px) {
+            top: 8px;
+            height: 45px;
+          }
         }
       }
     }
