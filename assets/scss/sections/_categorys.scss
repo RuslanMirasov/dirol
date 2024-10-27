@@ -236,6 +236,9 @@
       }
     }
   }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+  }
 }
 
 .white {
@@ -260,6 +263,9 @@
   gap: 20px;
   @media screen and (min-width: 768px) {
     transform: skewY(6.5deg) rotate(-6.5deg);
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 290px;
   }
   h3 {
     width: 100%;
@@ -385,6 +391,10 @@
         min-width: 130px;
         transform: translate(10%, 80%);
       }
+      @media screen and (max-width: 767px) {
+        min-width: 90px;
+        transform: translate(0%, 10%);
+      }
     }
     .collage__rc img {
       min-width: 182px;
@@ -396,6 +406,10 @@
       @media screen and (max-width: 1023px) {
         min-width: 110px;
         transform: translate(-70%, 550%);
+      }
+      @media screen and (max-width: 767px) {
+        min-width: 90px;
+        transform: translate(0%, 200%);
       }
     }
     .collage__cb img {
@@ -432,6 +446,10 @@
       @media screen and (max-width: 1023px) {
         transform: translate(20%, 50%);
       }
+      @media screen and (max-width: 767px) {
+        min-width: 90px;
+        transform: translate(0%, 20%);
+      }
     }
     .collage__rc img {
       min-width: 220px;
@@ -442,6 +460,10 @@
       }
       @media screen and (max-width: 1023px) {
         transform: translate(-60%, 140%);
+      }
+      @media screen and (max-width: 767px) {
+        min-width: 90px;
+        transform: translate(-30%, 180%);
       }
     }
   }
@@ -457,6 +479,10 @@
         min-width: 120px;
         transform: translate(40%, -50%);
       }
+      @media screen and (max-width: 767px) {
+        min-width: 90px;
+        transform: translate(40%, -100%);
+      }
     }
     .collage__rt img {
       min-width: 430px;
@@ -468,6 +494,10 @@
       @media screen and (max-width: 1023px) {
         min-width: 300px;
         transform: translate(-40%, -45%);
+      }
+      @media screen and (max-width: 767px) {
+        min-width: 150px;
+        transform: translate(-40%, -90%);
       }
     }
   }
@@ -482,6 +512,10 @@
       @media screen and (max-width: 1023px) {
         min-width: 300px;
       }
+      @media screen and (max-width: 767px) {
+        min-width: 200px;
+        transform: translate(25%, -60%);
+      }
     }
     .collage__rt img {
       min-width: 550px;
@@ -493,6 +527,10 @@
       @media screen and (max-width: 1023px) {
         min-width: 300px;
         transform: translate(-24%, -50%);
+      }
+      @media screen and (max-width: 767px) {
+        min-width: 200px;
+        transform: translate(-15%, 10%);
       }
     }
     .collage__rc img {
@@ -506,6 +544,10 @@
         min-width: 300px;
         transform: translate(-18%, 5%);
       }
+      @media screen and (max-width: 767px) {
+        min-width: 200px;
+        transform: translate(-18%, 220%);
+      }
     }
     .collage__lb img {
       min-width: 550px;
@@ -517,6 +559,10 @@
       @media screen and (max-width: 1023px) {
         min-width: 300px;
         transform: translate(15%, 10%);
+      }
+      @media screen and (max-width: 767px) {
+        min-width: 200px;
+        transform: translate(15%, 0%);
       }
     }
   }
@@ -533,6 +579,10 @@
         min-width: 220px;
         transform: translate(25%, 20%);
       }
+      @media screen and (max-width: 767px) {
+        min-width: 120px;
+        transform: translate(10%, -25%);
+      }
     }
     .collage__rt img {
       min-width: 320px;
@@ -545,6 +595,10 @@
         min-width: 180px;
         transform: translate(-44%, -25%);
       }
+      @media screen and (max-width: 767px) {
+        min-width: 120px;
+        transform: translate(-30%, 25%);
+      }
     }
     .collage__lb img {
       min-width: 320px;
@@ -552,6 +606,10 @@
       @media screen and (max-width: 1279px) {
         min-width: 150px;
         transform: translate(5%, 20%);
+      }
+      @media screen and (max-width: 767px) {
+        min-width: 120px;
+        transform: translate(15%, 50%);
       }
     }
   }
