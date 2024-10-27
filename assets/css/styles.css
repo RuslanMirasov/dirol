@@ -268,8 +268,8 @@ h6 {
   background: url("../img/title.jpg") no-repeat center center/cover;
   position: absolute;
   left: 0px;
-  top: 0%;
-  bottom: 0%;
+  top: 0px;
+  bottom: 0px;
   z-index: -1;
   box-shadow: 5px 5px 0px var(--white);
   transform: skewX(-20deg);
@@ -282,8 +282,8 @@ h6 {
 .title span.green.t--130:before, .title span.green.t--100:before {
   content: "";
   height: auto;
-  top: 14%;
-  bottom: 14%;
+  top: 8px;
+  bottom: 8px;
 }
 .title.ta--l {
   text-align: left;
