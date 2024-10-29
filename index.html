@@ -16,6 +16,7 @@
     <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/icons/apple-touch-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/icons/apple-touch-icon-152x152.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/icons/apple-touch-icon-180x180.png" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Dirol</title>
   </head>
@@ -59,22 +60,10 @@
 
     <main class="main" id="main">
       <!--Section--HERO-->
-      <section class="section section--hero">
+      <section class="section section--logo">
         <div class="container">
-          <div class="hero">
-            <!--hero--row-->
-            <div class="hero__image">
-              <div class="dirol-logo">
-                <img data-lazy data-src="./assets/img/hero/dirol.svg" alt="Dirol" />
-              </div>
-            </div>
-            <div class="titleBox">
-              <h1 class="title ta--l t--90">
-                <span>Войди</span> <br />
-                <span>во</span>
-                <span class="t--130 green">вкус</span>
-              </h1>
-            </div>
+          <div class="dirol-logo">
+            <img data-lazy data-src="./assets/img/hero/dirol.svg" alt="Dirol" />
           </div>
         </div>
       </section>
@@ -83,14 +72,37 @@
       <section class="section section--slider">
         <div class="container">
           <div class="titleBox">
-            <h2 class="title ta--l t--90">
-              <span>ОТКРОЙ</span> <br />
-              <span class="t--70">БЕСКОНЕЧНЫЙ</span><br />
-              <span class="green">ВКУС</span>
-            </h2>
+            <h1 class="title ta--l t--90">
+              <span>Войди</span> <br />
+              <span>во</span>
+              <span class="t--130 green">вкус</span>
+            </h1>
           </div>
-          <div class="button-wrapper ta--c">
-            <a href="./" class="button"><span>Смотреть все вкусы</span></a>
+          <div class="swiper dirol-slider">
+            <div class="slider-bg">
+              <img src="./assets/img/main-slider.png" alt="Dirol" />
+            </div>
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="./product.html"> <img src="./assets/img/products/1.jpg" alt="Dirol" /> </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./product.html"> <img src="./assets/img/products/22.jpg" alt="Dirol" /> </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./product.html"> <img src="./assets/img/products/26.jpg" alt="Dirol" class="big" /> </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./product.html"> <img src="./assets/img/products/28.png" alt="Dirol" class="no-border" /> </a>
+              </div>
+            </div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="button-wrapper ta--c">
+              <a href="./categorys.html" class="button"><span>Смотреть все вкусы</span></a>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -276,6 +288,7 @@
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/menu.js" type="module"></script>
     <script src="./assets/js/lazy-images.js" type="module"></script>
     <script src="./assets/js/scripts.js" type="module"></script>

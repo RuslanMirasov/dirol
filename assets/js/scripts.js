@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollLinks: document.querySelectorAll('[data-scrollto]'),
     header: document.querySelector('.header'),
     responsiveTexts: document.querySelectorAll('[data-responsivetext]'),
+    dirolSliders: document.querySelectorAll('.dirol-slider'),
   };
 
   //RESPONSIVE TEXT
@@ -79,6 +80,25 @@ document.addEventListener('DOMContentLoaded', () => {
           sliders[index] = null;
         }
       }
+    });
+  }
+
+  if (refs.dirolSliders.length > 0) {
+    refs.dirolSliders.forEach((slider, index) => {
+      sliders[index] = new Swiper(slider, {
+        centeredSlides: true,
+        allowTouchMove: true,
+        slidesPerView: 'auto',
+        spaceBetween: 80,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
     });
   }
 

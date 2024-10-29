@@ -116,6 +116,15 @@ h6 {
 .t--70 {
   font-size: 70px;
   line-height: 1;
+  @media screen and (max-width: 1279px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 1023px) {
+    font-size: 44px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 35px;
+  }
 }
 
 .t--80 {
@@ -194,6 +203,18 @@ h6 {
 
 .t--130 {
   font-size: 130px;
+  @media screen and (max-width: 1279px) {
+    font-size: 100px;
+  }
+  @media screen and (max-width: 1023px) {
+    font-size: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: 374px) {
+    font-size: 56px;
+  }
 }
 
 .subtitle {

@@ -132,6 +132,7 @@
     }
     @media screen and (max-width: 767px) {
       font-size: 18px;
+      padding: 5px 10px;
     }
     @media screen and (max-width: 374px) {
       font-size: 14px;
@@ -282,8 +283,10 @@
       align-items: center;
       align-content: center;
       transform: skewY(-6.5deg);
-      padding: 0px 60px;
       min-height: 74px;
+    }
+    @media screen and (max-width: 450px) {
+      padding: 0px 40px;
     }
     @media screen and (max-width: 374px) {
       font-size: 16px;
