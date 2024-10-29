@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     header: document.querySelector('.header'),
     responsiveTexts: document.querySelectorAll('[data-responsivetext]'),
     dirolSliders: document.querySelectorAll('.dirol-slider'),
+    history: document.querySelector('.history'),
   };
 
   //RESPONSIVE TEXT
@@ -99,6 +100,15 @@ document.addEventListener('DOMContentLoaded', () => {
           clickable: true,
         },
       });
+    });
+  }
+
+  if (refs.history) {
+    const historySlider = new Swiper(refs.history, {
+      centeredSlides: true,
+      allowTouchMove: true,
+      slidesPerView: 'auto',
+      spaceBetween: 80,
     });
   }
 

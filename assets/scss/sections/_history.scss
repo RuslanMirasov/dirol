@@ -3,4 +3,15 @@
   .title span.t--70 {
     margin-right: -70px;
   }
+  @media screen and (max-width: 767px) {
+    padding: 110px 0px 80px 0px;
+    .title span.t--70 {
+      margin-right: -20px;
+    }
+  }
+  @media screen and (max-width: 374px) {
+    .title span.t--70 {
+      margin-right: -10px;
+    }
+  }
 }

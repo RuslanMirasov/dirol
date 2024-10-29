@@ -893,6 +893,19 @@ h6 {
 .section.section--history .title span.t--70 {
   margin-right: -70px;
 }
+@media screen and (max-width: 767px) {
+  .section.section--history {
+    padding: 110px 0px 80px 0px;
+  }
+  .section.section--history .title span.t--70 {
+    margin-right: -20px;
+  }
+}
+@media screen and (max-width: 374px) {
+  .section.section--history .title span.t--70 {
+    margin-right: -10px;
+  }
+}
 
 .section.section--categorys {
   margin-top: 80px;
@@ -2979,7 +2992,7 @@ input[type=password] {
     right: 0px;
     top: 0px;
     z-index: 1;
-    background: var(--blue);
+    background: var(--footer-bg);
     transform: translate(101%, 0%);
     transition: transform 500ms cubic-bezier(0.39, 0.25, 0.18, 0.85);
   }
