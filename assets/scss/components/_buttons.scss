@@ -31,6 +31,20 @@
   z-index: 1;
   transform: skewY(-6.5deg);
   text-transform: uppercase;
+  @media screen and (max-width: 1279px) {
+    padding: 24px 20px;
+    min-width: 320px;
+  }
+  @media screen and (max-width: 1023px) {
+    padding: 20px 26px;
+    font-size: 24px;
+    min-width: auto;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 14px 22px;
+    font-size: 16px;
+    min-width: auto;
+  }
   &:before {
     content: '';
     width: 100%;

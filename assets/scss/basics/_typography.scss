@@ -7,6 +7,12 @@
   align-items: center;
   align-content: center;
   gap: 40px;
+  @media screen and (max-width: 1023px) {
+    gap: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    gap: 24px;
+  }
   p {
     width: 100%;
     text-align: center;
@@ -50,7 +56,7 @@ h6 {
         background: url('../img/title.jpg') no-repeat center center/cover;
         position: absolute;
         left: 0px;
-        top: 0px;
+        top: -2px;
         z-index: -1;
         box-shadow: 5px 5px 0px var(--white);
         transform: skewX(-20deg);
@@ -71,10 +77,36 @@ h6 {
 
 .t--42 {
   font-size: 42px;
+  @media screen and (max-width: 1279px) {
+    font-size: 36px;
+  }
+  @media screen and (max-width: 1023px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 21px;
+  }
 }
 
 .t--45 {
   font-size: 45px;
+}
+
+.t--55 {
+  font-size: 55px;
+  @media screen and (max-width: 1279px) {
+    font-size: 45px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 30px;
+  }
+  @media screen and (max-width: 374px) {
+    font-size: 26px;
+  }
+}
+
+.t--60 {
+  font-size: 60px;
 }
 
 .t--65 {
@@ -88,6 +120,15 @@ h6 {
 
 .t--80 {
   font-size: 80px;
+  @media screen and (max-width: 1279px) {
+    font-size: 70px;
+  }
+  @media screen and (max-width: 1023px) {
+    font-size: 54px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 40px;
+  }
 }
 
 .t--90 {
@@ -100,6 +141,9 @@ h6 {
   }
   @media screen and (max-width: 767px) {
     font-size: 45px;
+  }
+  @media screen and (max-width: 374px) {
+    font-size: 40px;
   }
 }
 
@@ -118,10 +162,34 @@ h6 {
 
 .t--110 {
   font-size: 110px;
+  @media screen and (max-width: 1279px) {
+    font-size: 100px;
+  }
+  @media screen and (max-width: 1023px) {
+    font-size: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 55px;
+  }
+  @media screen and (max-width: 374px) {
+    font-size: 50px;
+  }
 }
 
 .t--120 {
   font-size: 120px;
+  @media screen and (max-width: 1279px) {
+    font-size: 100px;
+  }
+  @media screen and (max-width: 1023px) {
+    font-size: 80px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 60px;
+  }
+  @media screen and (max-width: 374px) {
+    font-size: 56px;
+  }
 }
 
 .t--130 {

@@ -1,12 +1,29 @@
 import { menuToggle } from './menu.js';
-import { throttle } from './utils.js';
+import { throttle, debounce, responsiveText } from './utils.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const refs = {
     preloader: document.querySelector('.preloader'),
     scrollLinks: document.querySelectorAll('[data-scrollto]'),
     header: document.querySelector('.header'),
+    responsiveTexts: document.querySelectorAll('[data-responsivetext]'),
   };
+
+  //RESPONSIVE TEXT
+  const initResponsiveTexts = () => {
+    if (!refs.responsiveTexts) return;
+
+    refs.responsiveTexts.forEach(text => {
+      responsiveText(text);
+    });
+  };
+
+  window.addEventListener(
+    'resize',
+    debounce(() => {
+      initResponsiveTexts();
+    }, 200)
+  );
 
   // SCROLL TO BLOCK
   refs.scrollLinks.forEach(link => {
@@ -92,6 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
     hidePreloader();
     fixHeader();
+    initResponsiveTexts();
     initSliders();
   });
 
