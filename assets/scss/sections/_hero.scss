@@ -67,19 +67,52 @@
 
 .section.section--logo {
   padding: 0px;
+  .titleBox {
+    position: absolute;
+    right: 20px;
+    top: -50px;
+    padding-left: 50%;
+    @media screen and (max-width: 767px) {
+      position: relative;
+      right: auto;
+      top: auto;
+      padding-left: 0%;
+    }
+  }
+  .title {
+    span {
+      &:first-child {
+        margin-left: -30px;
+        @media screen and (max-width: 767px) {
+          margin-left: -20px;
+        }
+      }
+      &.green {
+        float: right;
+        position: relative;
+        @media screen and (max-width: 767px) {
+          padding: 0px 10px;
+        }
+      }
+    }
+  }
 }
 
 .dirol-logo {
   width: 70%;
   position: relative;
   max-width: 416px;
-  margin: 0 auto;
+  margin: 0px auto 0px 10%;
   margin-top: 250px;
   margin-bottom: 150px;
 
   @media screen and (max-width: 1023px) {
-    margin-top: 180px;
-    margin-bottom: 100px;
+    margin: 180px auto 0px 0%;
+  }
+
+  @media screen and (max-width: 767px) {
+    margin: 140px auto;
+    margin-bottom: 60px;
   }
 
   &:before,

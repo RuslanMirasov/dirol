@@ -4,7 +4,7 @@ import { throttle, debounce, responsiveText } from './utils.js';
 document.addEventListener('DOMContentLoaded', () => {
   const refs = {
     preloader: document.querySelector('.preloader'),
-    scrollLinks: document.querySelectorAll('[data-scrollto]'),
+    scrollLinks: document.querySelectorAll('.scrollto'),
     header: document.querySelector('.header'),
     responsiveTexts: document.querySelectorAll('[data-responsivetext]'),
     dirolSliders: document.querySelectorAll('.dirol-slider'),
@@ -47,6 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
           history.pushState(null, null, targetId);
         }, 500);
+      } else {
+        window.location.href = `./${targetId}`;
       }
     });
   });
@@ -109,6 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
       allowTouchMove: true,
       slidesPerView: 'auto',
       spaceBetween: 80,
+      mousewheel: {
+        releaseOnEdges: true,
+      },
+      initialSlide: window.innerWidth >= 1280 ? 1 : 0,
     });
   }
 

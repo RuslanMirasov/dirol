@@ -26,6 +26,7 @@ body,
   overflow-x: hidden;
   overflow-y: auto;
   font-family: var(--font);
+  font-style: italic;
   color: var(--white);
   line-height: 1.2;
   background: url('../img/bg.jpg') repeat-y center top;
@@ -151,5 +152,21 @@ ol {
 
   .swiper-pagination-bullet {
     background-image: url('../img/svg/pagination.svg');
+  }
+}
+
+.anchor {
+  display: block;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+  visibility: hidden;
+  position: absolute;
+  left: 0px;
+  top: -100px;
+  @media screen and (max-width: 767px) {
+    top: -50px;
   }
 }

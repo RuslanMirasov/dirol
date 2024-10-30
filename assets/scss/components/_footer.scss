@@ -7,6 +7,7 @@
   z-index: 1;
   text-transform: uppercase;
   text-shadow: 3px 3px 0px var(--black);
+  font-style: italic;
   @media screen and (max-width: 767px) {
     padding: 30px 0px 50px 0px;
   }
@@ -66,10 +67,16 @@
     background: var(--white);
     color: var(--footer-bg);
     box-shadow: 3px 3px 0px var(--black);
+    transition: 0.3s;
     svg {
       display: block;
       position: absolute;
       width: 65%;
+    }
+  }
+  &:hover {
+    .social-link__icon {
+      background: #ffe500;
     }
   }
 }
@@ -80,6 +87,20 @@
   display: inline;
   line-height: 1.5;
   border-bottom: 1px solid var(--white);
+  &:hover {
+    border-bottom: 1px solid #ffe500;
+  }
+}
+.menu.menu--footer .menu__link {
+  transition: 0.3s;
+}
+.menu.menu--footer .menu__link:hover {
+  color: #ffe500;
+  &:before {
+    height: 1px;
+    margin-top: -2px;
+    background: #ffe500 !important;
+  }
 }
 .menu.menu--footer .menu__link,
 .menu.menu--footer p {
