@@ -40,17 +40,33 @@
   .menu__link {
     transition: 0.3s;
     text-transform: uppercase;
+    &:before {
+      content: '';
+      transition: 0.3s;
+      width: 100%;
+      position: absolute;
+      top: 110%;
+      left: 0px;
+      height: 3px;
+      background: var(--white);
+      box-shadow: 3px 3px 0px var(--black);
+      opacity: 0;
+    }
+    &:hover,
     &.active {
       &:before {
-        content: '';
-        transition: 0.3s;
-        width: 100%;
-        position: absolute;
-        top: 110%;
-        left: 0px;
-        height: 3px;
-        background: var(--white);
-        box-shadow: 3px 3px 0px var(--black);
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.fix {
+  .menu {
+    .menu__link {
+      &:before {
+        background: var(--black);
+        box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
       }
     }
   }

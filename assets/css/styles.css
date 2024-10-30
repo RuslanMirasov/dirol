@@ -231,11 +231,11 @@ ol {
   visibility: hidden;
   position: absolute;
   left: 0px;
-  top: -100px;
+  top: -60px;
 }
 @media screen and (max-width: 767px) {
   .anchor {
-    top: -50px;
+    top: 0px;
   }
 }
 
@@ -712,7 +712,6 @@ h6 {
   max-width: 416px;
   margin: 0px auto 0px 10%;
   margin-top: 250px;
-  margin-bottom: 150px;
 }
 @media screen and (max-width: 1023px) {
   .dirol-logo {
@@ -2496,7 +2495,6 @@ h6 {
   width: 50px;
   height: 46px;
   padding: 11px;
-  padding-top: 14px;
   background: var(--white);
   order: 3;
   box-shadow: 5px 5px 0px var(--black);
@@ -2730,16 +2728,17 @@ h6 {
 }
 
 .menu.menu--footer .menu__link {
-  transition: 0.3s;
+  padding-bottom: 2px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+.menu.menu--footer .menu__link:before {
+  content: none;
 }
 
-.menu.menu--footer .menu__link:hover {
+.menu.menu--footer .menu__link:hover,
+.menu.menu--footer .menu__link.active {
   color: #ffe500;
-}
-.menu.menu--footer .menu__link:hover:before {
-  height: 1px;
-  margin-top: -2px;
-  background: #ffe500 !important;
+  border-bottom: 1px solid #ffe500;
 }
 
 .menu.menu--footer .menu__link,
@@ -2792,7 +2791,7 @@ h6 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    text-shadow: 3px 3px 0px var(--black);
+    text-shadow: 2px 2px 0px var(--black);
   }
   .menu.menu--footer .menu__list {
     max-width: 100%;
@@ -3206,7 +3205,7 @@ input[type=password] {
   transition: 0.3s;
   text-transform: uppercase;
 }
-.menu .menu__link.active:before {
+.menu .menu__link:before {
   content: "";
   transition: 0.3s;
   width: 100%;
@@ -3216,6 +3215,15 @@ input[type=password] {
   height: 3px;
   background: var(--white);
   box-shadow: 3px 3px 0px var(--black);
+  opacity: 0;
+}
+.menu .menu__link:hover:before, .menu .menu__link.active:before {
+  opacity: 1;
+}
+
+.fix .menu .menu__link:before {
+  background: var(--black);
+  box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
 /*MOBIL*/
