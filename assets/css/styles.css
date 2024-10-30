@@ -992,7 +992,7 @@ h6 {
   transform: scale(1) translate(0%, 0%);
 }
 .history .swiper-slide.swiper-slide-active h3 {
-  font-size: 80px;
+  transform: skewY(-6.5deg) scale(1) translate(0%, 0%);
 }
 .history .swiper-slide:after {
   content: "";
@@ -1044,10 +1044,10 @@ h6 {
   display: block;
   position: relative;
   width: 100%;
-  font-size: 50px;
+  font-size: 80px;
   line-height: 1;
   text-shadow: 4px 4px 0px var(--black);
-  transform: skewY(-6.5deg);
+  transform: skewY(-6.5deg) scale(0.7) translate(0%, 24%);
   margin-top: -14%;
   transition: 0.3s;
 }
