@@ -619,3 +619,40 @@
     }
   }
 }
+
+.shere-with-friends {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: 90px;
+  bottom: 130px;
+  padding: 26px 34px;
+  background: var(--white);
+  border-radius: 20px;
+  color: var(--black);
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+  font-size: 28px;
+  text-transform: uppercase;
+  transform: rotate(-6.5deg);
+  @media screen and (max-width: 1279px) {
+    bottom: 90px;
+    margin-left: 6%;
+  }
+  @media screen and (max-width: 1023px) {
+    bottom: 110px;
+    margin-left: 2%;
+    font-size: 23px;
+    padding: 24px 34px;
+  }
+  @media screen and (max-width: 767px) {
+    width: auto;
+    bottom: auto;
+    margin-left: auto;
+    font-size: 24px;
+    padding: 20px 24px;
+    position: relative;
+    margin: 0 auto;
+    transform: rotate(-6.5deg) translate(-50%, -20%);
+    margin-bottom: 20px;
+  }
+}

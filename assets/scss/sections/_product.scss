@@ -152,3 +152,28 @@
     }
   }
 }
+
+.category-name {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  left: 60%;
+  top: -40px;
+  font-size: 70px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-shadow: 4px 4px 0px var(--black);
+  transform: rotate(-6.5deg);
+  z-index: 2;
+  @media screen and (max-width: 1023px) {
+    font-size: 50px;
+  }
+  @media screen and (max-width: 1023px) {
+    font-size: 32px;
+    top: -0px;
+  }
+  @media screen and (max-width: 374px) {
+    left: 50%;
+    font-size: 28px;
+  }
+}

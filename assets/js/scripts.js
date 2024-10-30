@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (targetElement) {
         const rect = targetElement.getBoundingClientRect();
-        const distance = rect.top + window.scrollY - refs.header.getBoundingClientRect().height;
+        const distance = rect.top + window.scrollY;
 
         window.scrollTo({ top: distance, left: 0, behavior: 'smooth' });
         setTimeout(() => {
@@ -100,6 +100,16 @@ document.addEventListener('DOMContentLoaded', () => {
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
+        },
+        on: {
+          slideChange: function () {
+            const activeSlide = this.slides[this.activeIndex];
+            const category = activeSlide.getAttribute('data-category');
+            if (category) {
+              const categoryNameElement = document.querySelector('.category-name');
+              categoryNameElement.textContent = category;
+            }
+          },
         },
       });
     });
