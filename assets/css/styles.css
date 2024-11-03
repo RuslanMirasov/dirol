@@ -239,6 +239,11 @@ ol {
   }
 }
 
+.wp-block-heading {
+  width: 100%;
+  text-shadow: 3px 3px 0px var(--black);
+}
+
 .titleBox {
   display: flex;
   position: relative;
@@ -642,6 +647,7 @@ h6 {
   .hero.hero--row .hero__image .title,
 .hero.hero--row .titleBox .title {
     margin-bottom: 20px;
+    text-align: center;
   }
 }
 
@@ -1102,7 +1108,7 @@ h6 {
 }
 @media screen and (max-width: 1023px) {
   .section.section--categorys .titleBox {
-    padding: 0px 0px 300px 0px;
+    padding: 0px 0px 80px 0px;
   }
 }
 @media screen and (max-width: 767px) {
