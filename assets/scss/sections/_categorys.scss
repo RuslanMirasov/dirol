@@ -384,7 +384,7 @@
   .collage img {
     min-width: 180px;
   }
-  &:nth-child(2) {
+  &.category--fruits {
     .collage__lt img {
       min-width: 174px;
       transform: translate(-40%, 120%);
@@ -440,7 +440,7 @@
       }
     }
   }
-  &:nth-child(3) {
+  &.category--mint {
     .collage__lt img {
       min-width: 184px;
       transform: translate(-30%, 80%);
@@ -472,7 +472,7 @@
       }
     }
   }
-  &:nth-child(4) {
+  &.category--white {
     .collage__lt img {
       min-width: 196px;
       transform: translate(0%, 36%);
@@ -506,7 +506,7 @@
       }
     }
   }
-  &:nth-child(6) {
+  &.category--xfresh {
     .collage__lt img {
       min-width: 530px;
       transform: translate(14%, 15%);
@@ -571,7 +571,7 @@
       }
     }
   }
-  &:nth-child(7) {
+  &.category--turbo {
     z-index: 3;
     .collage__lt img {
       min-width: 406px;

@@ -2,7 +2,16 @@
   padding: 0px 0px 80px 0px;
   @media screen and (max-width: 767px) {
     padding: 0px 0px 60px 0px;
+    .t--90 {
+      font-size: 40px;
+    }
   }
+  @media screen and (max-width: 374px) {
+    .t--90 {
+      font-size: 38px;
+    }
+  }
+
   .title {
     span {
       &:first-child {

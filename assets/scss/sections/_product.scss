@@ -29,6 +29,7 @@
         .t--100 {
           width: 100%;
           right: 0%;
+          padding-bottom: 4px;
         }
       }
     }
@@ -60,7 +61,7 @@
         margin-top: 30px;
       }
       @media screen and (max-width: 767px) {
-        left: 10px;
+        transform: rotate(0deg) skewY(-6.5deg);
         font-size: 22px;
       }
       @media screen and (max-width: 374px) {
@@ -173,7 +174,6 @@
     top: -0px;
   }
   @media screen and (max-width: 374px) {
-    left: 50%;
     font-size: 28px;
   }
 }
